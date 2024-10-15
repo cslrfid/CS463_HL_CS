@@ -1,0 +1,23 @@
+C:\Users\Mephist Siu\Downloads\CS463_HL_CS 1.0.0.3\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.csproj.AssemblyReference.cache
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\bin\Debug\CS463_HL_CS.exe.config
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\bin\Debug\CS463_HL_CS.exe
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\bin\Debug\CS463_HL_CS.pdb
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.csproj.AssemblyReference.cache
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.frmEvent.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.frmCapturePointName.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.frmMain.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.frmOperationProfile.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.Properties.Resources.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.frmReaderID.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.frmResultantAction.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.frmTrigger.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.frmTrustedServer.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.csproj.GenerateResource.cache
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.csproj.CoreCompileInputs.cache
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.exe
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.pdb
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.Form_ImportMembers.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.Form_DelAllMember.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.Form_DelMember.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.Form_AddMember.resources
+C:\Projects\GitHub\CS463_HL_CS 1.0.0.3\obj\Debug\CS463_HL_CS.Form_NewTagGroup.resources
