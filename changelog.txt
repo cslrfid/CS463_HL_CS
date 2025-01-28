@@ -1,0 +1,85 @@
+v1.0.0.2
+- change PC time to reader time
+
+v1.0.0.1
+- fix can not show "none" action
+- fix show wrong frequency
+- fix can not show port number
+
+v1.0.0.0
+- port to CS463 and Vistual studio 2019
+
+v2.0.0.11
+- Developed on firmware v2.2.0 SP18 RC49
+- Support reading of Protocol-Control bits, Bank0, Bank2, Bank3
+
+2.0.0.9
+- Add "Beep" check box. When checked, a Windows System Beep tone will be generated if tag is received from reader.
+
+2.0.0.8
+- Display every received tag (Instant Alert to Server mode) immediately will consume to many resource on Trusted Server.
+It is changed to display received tags (Instant Alert to Server mode) periodically. 
+- Using 2.0.0.11 API code.
+
+2.0.0.5
+- Show Tag & TagList at the same time.
+
+2.0.0.4
+- Using 2.0.0.7 API Code
+- Show all Tag Information received from reader on Table. (Trusted Server / HTTP command)
+
+2.0.0.3
+- Replace Lock() with Monitor.Enter() / Monitor.Exit()
+- Using 2.0.0.5 API code
+
+2.0.0.1
+- A new class "TrustedServer" implemented to handle TCP socket.
+- TrustedServer class support multiple client connections.
+- TrustedServer class implements .Net events for notifications and tag information.
+
+
+1.0.4.1
+- UI changed.
+- Trigger API changed.
+- Event API changed.
+- TCP disconnected at the end of Tag Notification session.
+- Antenna mismatch notification added.
+- End of Batch (End of Tag Notification Session) notification added.
+
+
+1.0.3.5
+- Reset tcp connected if idle for 10 seconds.
+
+1.0.3.4
+- Save user settings in registry
+- UI changed
+
+1.0.3.0
+- Add about box
+- Add Logo
+- UI changed
+
+
+1.0.2.6 (Released as demo code)
+- Disable getCaptureTagsRaw API.
+- Tags alert mode changed to "Autonomous Time Trigger" and "Polling Trigger by Client".
+- Reader ID API & Dialog implemented.
+- Operation Profile API & Dialog implemented.
+- Capture Point Name API & Dialog implemented.
+- Trusted (Notification) Server API & Dialog implemented.
+- Tag Filter API & Dialog implemented.
+- Trigger API & Dialog implemented.
+- Resultant Action API & Dialog implemented.
+- Event API & Dialog implemented.
+- Save tags to file implemented.
+- Edge Server 1.192, Middleware 1.1.33
+
+1.0.1.0 (Released as demo code)
+- rewrite read tags function such that tags are read in separated thread.
+- tags are stored in a local array.
+- Class TAG changed. Member variable frequency, rssi and time are not string now.
+- frequency in class TAG updated to store real frequency. Calculation is not done in last release.
+- RSSI in class TAG updated to store real RSSI. Calculation is not done in last release.
+
+1.0.0.0
+- read tags every 1 seconds.
