@@ -1971,6 +1971,186 @@ namespace CSL
             }
         }
 
+        #region UCODE DNA
+        public string ucodeDNAReadKey(string epc, int keyID)
+        {
+            string cmd = "ucodeDNAReadKey";
+            ErrorCode = ERR_CODE_UNKNOWN_RESPONSE;
+            ErrorMsg = ERR_MSG_UNKNOWN_RESPONSE;    //default error message
+
+            System.Collections.ArrayList list = new System.Collections.ArrayList();
+
+            try
+            {
+                StringBuilder sbReq = new StringBuilder();
+
+                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}", 
+                    httpUri.AbsoluteUri, 
+                    cmd, 
+                    SessionId,
+                    epc,
+                    keyID
+                    ));
+
+                string resp = sendHTTPRequest(sbReq.ToString());
+                if (resp == null) return null;
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(resp);
+                if (isCSLResponse(ref doc, cmd) == false) return null;
+
+                XmlNode node = doc.SelectSingleNode("CSL/Key");
+                if (node != null)
+                {
+                    return node.InnerText;
+                }
+
+                parseErrorCode(ref doc);
+                return null;
+            }
+            catch
+            {
+                ErrorCode = ERR_CODE_UNKNOWN_ERROR;
+                ErrorMsg = ERR_MSG_UNKNOWN_ERROR;
+                return null;
+            }
+        }
+
+        public bool ucodeDNAWriteKey(string epc, int keyID, string keyValue)
+        {
+            string cmd = "ucodeDNAWriteKey";
+            ErrorCode = ERR_CODE_UNKNOWN_RESPONSE;
+            ErrorMsg = ERR_MSG_UNKNOWN_RESPONSE;    //default error message
+
+            try
+            {
+                StringBuilder sbReq = new StringBuilder();
+
+                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}&newKey={5}",
+                    httpUri.AbsoluteUri,
+                    cmd,
+                    SessionId,
+                    epc,
+                    keyID,
+                    keyValue
+                    ));
+
+                string resp = sendHTTPRequest(sbReq.ToString());
+                if (resp == null) return false;
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(resp);
+                if (isCSLResponse(ref doc, cmd) == false) return false;
+
+                XmlNode node = doc.SelectSingleNode("CSL/Ack");
+                if (node != null)
+                {
+                    if (node.InnerXml.StartsWith("OK", StringComparison.OrdinalIgnoreCase))
+                    {
+                        ErrorCode = ERR_CODE_NO_ERROR;
+                        ErrorMsg = "";
+                        return true;
+                    }
+                }
+                parseErrorCode(ref doc);
+                return false;
+            }
+            catch
+            {
+                ErrorCode = ERR_CODE_UNKNOWN_ERROR;
+                ErrorMsg = ERR_MSG_UNKNOWN_ERROR;
+                return false;
+            }
+        }
+
+        public bool ucodeDNAActivateKey(string epc, int keyID)
+        {
+            string cmd = "ucodeDNAActivateKey";
+            ErrorCode = ERR_CODE_UNKNOWN_RESPONSE;
+            ErrorMsg = ERR_MSG_UNKNOWN_RESPONSE;    //default error message
+
+            try
+            {
+                StringBuilder sbReq = new StringBuilder();
+
+                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}",
+                    httpUri.AbsoluteUri,
+                    cmd,
+                    SessionId,
+                    epc,
+                    keyID
+                    ));
+
+                string resp = sendHTTPRequest(sbReq.ToString());
+                if (resp == null) return false;
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(resp);
+                if (isCSLResponse(ref doc, cmd) == false) return false;
+
+                XmlNode node = doc.SelectSingleNode("CSL/Ack");
+                if (node != null)
+                {
+                    if (node.InnerXml.StartsWith("OK", StringComparison.OrdinalIgnoreCase))
+                    {
+                        ErrorCode = ERR_CODE_NO_ERROR;
+                        ErrorMsg = "";
+                        return true;
+                    }
+                }
+                parseErrorCode(ref doc);
+                return false;
+            }
+            catch
+            {
+                ErrorCode = ERR_CODE_UNKNOWN_ERROR;
+                ErrorMsg = ERR_MSG_UNKNOWN_ERROR;
+                return false;
+            }
+        }
+        public string ucodeDNAAuthenticate(string epc, string tamType, string challenge)
+        {
+            string cmd = "ucodeDNAAuthenticate";
+            ErrorCode = ERR_CODE_UNKNOWN_RESPONSE;
+            ErrorMsg = ERR_MSG_UNKNOWN_RESPONSE;    //default error message
+
+            System.Collections.ArrayList list = new System.Collections.ArrayList();
+
+            try
+            {
+                StringBuilder sbReq = new StringBuilder();
+
+                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&challenge={4}&type={5}",
+                    httpUri.AbsoluteUri,
+                    cmd,
+                    SessionId,
+                    epc,
+                    challenge,
+                    tamType
+                    ));
+
+                string resp = sendHTTPRequest(sbReq.ToString());
+                if (resp == null) return null;
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(resp);
+                if (isCSLResponse(ref doc, cmd) == false) return null;
+
+                XmlNode node = doc.SelectSingleNode("CSL/Response");
+                if (node != null)
+                {
+                    return node.InnerText;
+                }
+
+                parseErrorCode(ref doc);
+                return null;
+            }
+            catch
+            {
+                ErrorCode = ERR_CODE_UNKNOWN_ERROR;
+                ErrorMsg = ERR_MSG_UNKNOWN_ERROR;
+                return null;
+            }
+        }
+
+        #endregion
+
         #region TriggeringLogic
         public System.Collections.ArrayList listTriggeringLogic()
         {

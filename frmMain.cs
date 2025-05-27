@@ -813,5 +813,11 @@ namespace CS463_HL_CS
             Form_ImportMembers frm = new Form_ImportMembers();
             frm.ShowDialog();
         }
+
+        private void uCODEDNAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_UCODEDNA frm = new Form_UCODEDNA();
+            frm.ShowDialog();
+        }
     }
 }

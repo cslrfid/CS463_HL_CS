@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_UCODEDNA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UCODEDNA.Designer.cs">
+      <DependentUpon>Form_UCODEDNA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ImportMembers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_NewTagGroup.resx">
       <DependentUpon>Form_NewTagGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UCODEDNA.resx">
+      <DependentUpon>Form_UCODEDNA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEvent.resx">
       <SubType>Designer</SubType>

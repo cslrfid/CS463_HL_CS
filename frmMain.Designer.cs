@@ -62,6 +62,7 @@ namespace CS463_HL_CS
             this.deleteMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAllMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uCODEDNAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAlert = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAlertPort = new System.Windows.Forms.TextBox();
@@ -292,7 +293,8 @@ namespace CS463_HL_CS
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.settingsToolStripMenuItem,
-            this.miscToolStripMenuItem});
+            this.miscToolStripMenuItem,
+            this.uCODEDNAToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(792, 28);
@@ -423,6 +425,13 @@ namespace CS463_HL_CS
             this.importMembersToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
             this.importMembersToolStripMenuItem.Text = "Import Members";
             this.importMembersToolStripMenuItem.Click += new System.EventHandler(this.importMembersToolStripMenuItem_Click);
+            // 
+            // uCODEDNAToolStripMenuItem
+            // 
+            this.uCODEDNAToolStripMenuItem.Name = "uCODEDNAToolStripMenuItem";
+            this.uCODEDNAToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
+            this.uCODEDNAToolStripMenuItem.Text = "UCODE DNA";
+            this.uCODEDNAToolStripMenuItem.Click += new System.EventHandler(this.uCODEDNAToolStripMenuItem_Click);
             // 
             // btnAlert
             // 
@@ -945,6 +954,7 @@ namespace CS463_HL_CS
         private System.Windows.Forms.ToolStripMenuItem deleteMemberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteAllMemberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importMembersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uCODEDNAToolStripMenuItem;
     }
 }
 
