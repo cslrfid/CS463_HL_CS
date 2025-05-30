@@ -1972,7 +1972,7 @@ namespace CSL
         }
 
         #region UCODE DNA
-        public string ucodeDNAReadKey(string epc, int keyID)
+        public string ucodeDNAReadKey(string antenna, string epc, int keyID)
         {
             string cmd = "ucodeDNAReadKey";
             ErrorCode = ERR_CODE_UNKNOWN_RESPONSE;
@@ -1984,12 +1984,13 @@ namespace CSL
             {
                 StringBuilder sbReq = new StringBuilder();
 
-                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}", 
+                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}&antennaPort={5}", 
                     httpUri.AbsoluteUri, 
                     cmd, 
                     SessionId,
                     epc,
-                    keyID
+                    keyID,
+                    antenna
                     ));
 
                 string resp = sendHTTPRequest(sbReq.ToString());
@@ -2015,7 +2016,7 @@ namespace CSL
             }
         }
 
-        public bool ucodeDNAWriteKey(string epc, int keyID, string keyValue)
+        public bool ucodeDNAWriteKey(string antenna, string epc, int keyID, string keyValue)
         {
             string cmd = "ucodeDNAWriteKey";
             ErrorCode = ERR_CODE_UNKNOWN_RESPONSE;
@@ -2025,13 +2026,14 @@ namespace CSL
             {
                 StringBuilder sbReq = new StringBuilder();
 
-                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}&newKey={5}",
+                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}&newKey={5}&antennaPort={6}",
                     httpUri.AbsoluteUri,
                     cmd,
                     SessionId,
                     epc,
                     keyID,
-                    keyValue
+                    keyValue,
+                    antenna
                     ));
 
                 string resp = sendHTTPRequest(sbReq.ToString());
@@ -2061,7 +2063,7 @@ namespace CSL
             }
         }
 
-        public bool ucodeDNAActivateKey(string epc, int keyID)
+        public bool ucodeDNAActivateKey(string antenna, string epc, int keyID)
         {
             string cmd = "ucodeDNAActivateKey";
             ErrorCode = ERR_CODE_UNKNOWN_RESPONSE;
@@ -2071,12 +2073,13 @@ namespace CSL
             {
                 StringBuilder sbReq = new StringBuilder();
 
-                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}",
+                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&keyType={4}&antennaPort={5}",
                     httpUri.AbsoluteUri,
                     cmd,
                     SessionId,
                     epc,
-                    keyID
+                    keyID,
+                    antenna
                     ));
 
                 string resp = sendHTTPRequest(sbReq.ToString());
@@ -2105,7 +2108,7 @@ namespace CSL
                 return false;
             }
         }
-        public string ucodeDNAAuthenticate(string epc, string tamType, string challenge)
+        public string ucodeDNAAuthenticate(string antenna, string epc, string tamType, string challenge)
         {
             string cmd = "ucodeDNAAuthenticate";
             ErrorCode = ERR_CODE_UNKNOWN_RESPONSE;
@@ -2117,13 +2120,14 @@ namespace CSL
             {
                 StringBuilder sbReq = new StringBuilder();
 
-                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&challenge={4}&type={5}",
+                sbReq.Append(String.Format("{0}API?command={1}&session_id={2}&maskBank=maskBank&mask={3}&challenge={4}&type={5}&antennaPort={6}",
                     httpUri.AbsoluteUri,
                     cmd,
                     SessionId,
                     epc,
                     challenge,
-                    tamType
+                    tamType,
+                    antenna
                     ));
 
                 string resp = sendHTTPRequest(sbReq.ToString());

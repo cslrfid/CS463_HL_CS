@@ -43,7 +43,7 @@ namespace CS463_HL_CS
                 return;
             }
 
-            string key = reader.ucodeDNAReadKey(textBox_EPC.Text, 0);
+            string key = reader.ucodeDNAReadKey(comboBox_Antenna.Text.Substring(0,1), textBox_EPC.Text, 0);
             if (key != null)
             {
                 textBox_Key0.Text = key;
@@ -65,7 +65,7 @@ namespace CS463_HL_CS
                 return;
             }
 
-            string key = reader.ucodeDNAReadKey(textBox_EPC.Text, 1);
+            string key = reader.ucodeDNAReadKey(comboBox_Antenna.Text.Substring(0, 1), textBox_EPC.Text, 1);
             if (key != null)
             {
                 textBox_Key1.Text = key;
@@ -87,7 +87,7 @@ namespace CS463_HL_CS
                 return;
             }
 
-            if (reader.ucodeDNAWriteKey(textBox_EPC.Text, 0, textBox_Key0.Text))
+            if (reader.ucodeDNAWriteKey(comboBox_Antenna.Text.Substring(0, 1), textBox_EPC.Text, 0, textBox_Key0.Text))
             {
                 MessageBox.Show(String.Format("Write Key 0 OK.\n"), "UCODE DNA", MessageBoxButtons.OK);
             }
@@ -107,7 +107,7 @@ namespace CS463_HL_CS
                 return;
             }
 
-            if (reader.ucodeDNAWriteKey(textBox_EPC.Text, 1, textBox_Key1.Text))
+            if (reader.ucodeDNAWriteKey(comboBox_Antenna.Text.Substring(0, 1), textBox_EPC.Text, 1, textBox_Key1.Text))
             {
                 MessageBox.Show(String.Format("Write Key 1 OK.\n"), "UCODE DNA", MessageBoxButtons.OK);
             }
@@ -127,7 +127,7 @@ namespace CS463_HL_CS
                 return;
             }
 
-            if (reader.ucodeDNAActivateKey(textBox_EPC.Text, 0))
+            if (reader.ucodeDNAActivateKey(comboBox_Antenna.Text.Substring(0, 1), textBox_EPC.Text, 0))
             {
                 MessageBox.Show(String.Format("Activate Key 0 OK.\n"), "UCODE DNA", MessageBoxButtons.OK);
             }
@@ -147,7 +147,7 @@ namespace CS463_HL_CS
                 return;
             }
 
-            if (reader.ucodeDNAActivateKey(textBox_EPC.Text, 1))
+            if (reader.ucodeDNAActivateKey(comboBox_Antenna.Text.Substring(0, 1), textBox_EPC.Text, 1))
             {
                 MessageBox.Show(String.Format("Activate Key 1 OK.\n"), "UCODE DNA", MessageBoxButtons.OK);
             }
@@ -167,7 +167,7 @@ namespace CS463_HL_CS
                 return;
             }
 
-            string response = reader.ucodeDNAAuthenticate(textBox_EPC.Text, "TAM1", textBox_Challenge.Text);
+            string response = reader.ucodeDNAAuthenticate(comboBox_Antenna.Text.Substring(0, 1), textBox_EPC.Text, "TAM1", textBox_Challenge.Text);
             if (response != null)
             {
                 label_TagResponse.Text = response;
@@ -189,7 +189,7 @@ namespace CS463_HL_CS
                 return;
             }
 
-            string response = reader.ucodeDNAAuthenticate(textBox_EPC.Text, "TAM2", textBox_Challenge.Text);
+            string response = reader.ucodeDNAAuthenticate(comboBox_Antenna.Text.Substring(0, 1), textBox_EPC.Text, "TAM2", textBox_Challenge.Text);
             if (response != null)
             {
                 label_TagResponse.Text = response;

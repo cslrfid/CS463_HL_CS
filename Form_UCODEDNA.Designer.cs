@@ -46,20 +46,22 @@
             this.button_TAM2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_EPC = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox_Antenna = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox_Key0
             // 
-            this.textBox_Key0.Location = new System.Drawing.Point(195, 100);
+            this.textBox_Key0.Location = new System.Drawing.Point(195, 158);
             this.textBox_Key0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_Key0.Name = "textBox_Key0";
             this.textBox_Key0.Size = new System.Drawing.Size(356, 26);
-            this.textBox_Key0.TabIndex = 0;
+            this.textBox_Key0.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 103);
+            this.label1.Location = new System.Drawing.Point(65, 161);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 20);
@@ -68,7 +70,7 @@
             // 
             // button_ReadKey0
             // 
-            this.button_ReadKey0.Location = new System.Drawing.Point(195, 140);
+            this.button_ReadKey0.Location = new System.Drawing.Point(195, 198);
             this.button_ReadKey0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_ReadKey0.Name = "button_ReadKey0";
             this.button_ReadKey0.Size = new System.Drawing.Size(112, 35);
@@ -79,7 +81,7 @@
             // 
             // button_WriteKey0
             // 
-            this.button_WriteKey0.Location = new System.Drawing.Point(317, 140);
+            this.button_WriteKey0.Location = new System.Drawing.Point(317, 198);
             this.button_WriteKey0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_WriteKey0.Name = "button_WriteKey0";
             this.button_WriteKey0.Size = new System.Drawing.Size(112, 35);
@@ -90,7 +92,7 @@
             // 
             // button_ActivateKey0
             // 
-            this.button_ActivateKey0.Location = new System.Drawing.Point(439, 140);
+            this.button_ActivateKey0.Location = new System.Drawing.Point(439, 198);
             this.button_ActivateKey0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_ActivateKey0.Name = "button_ActivateKey0";
             this.button_ActivateKey0.Size = new System.Drawing.Size(112, 35);
@@ -102,7 +104,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 210);
+            this.label2.Location = new System.Drawing.Point(65, 268);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 20);
@@ -111,7 +113,7 @@
             // 
             // textBox_Key1
             // 
-            this.textBox_Key1.Location = new System.Drawing.Point(195, 207);
+            this.textBox_Key1.Location = new System.Drawing.Point(195, 265);
             this.textBox_Key1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_Key1.Name = "textBox_Key1";
             this.textBox_Key1.Size = new System.Drawing.Size(356, 26);
@@ -119,7 +121,7 @@
             // 
             // button_ActivateKey1
             // 
-            this.button_ActivateKey1.Location = new System.Drawing.Point(439, 247);
+            this.button_ActivateKey1.Location = new System.Drawing.Point(439, 305);
             this.button_ActivateKey1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_ActivateKey1.Name = "button_ActivateKey1";
             this.button_ActivateKey1.Size = new System.Drawing.Size(112, 35);
@@ -130,7 +132,7 @@
             // 
             // button_WriteKey1
             // 
-            this.button_WriteKey1.Location = new System.Drawing.Point(317, 247);
+            this.button_WriteKey1.Location = new System.Drawing.Point(317, 305);
             this.button_WriteKey1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_WriteKey1.Name = "button_WriteKey1";
             this.button_WriteKey1.Size = new System.Drawing.Size(112, 35);
@@ -141,7 +143,7 @@
             // 
             // button_ReadKey1
             // 
-            this.button_ReadKey1.Location = new System.Drawing.Point(195, 247);
+            this.button_ReadKey1.Location = new System.Drawing.Point(195, 305);
             this.button_ReadKey1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_ReadKey1.Name = "button_ReadKey1";
             this.button_ReadKey1.Size = new System.Drawing.Size(112, 35);
@@ -153,7 +155,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 335);
+            this.label3.Location = new System.Drawing.Point(65, 393);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 20);
@@ -162,7 +164,7 @@
             // 
             // textBox_Challenge
             // 
-            this.textBox_Challenge.Location = new System.Drawing.Point(195, 331);
+            this.textBox_Challenge.Location = new System.Drawing.Point(195, 389);
             this.textBox_Challenge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_Challenge.Name = "textBox_Challenge";
             this.textBox_Challenge.Size = new System.Drawing.Size(338, 26);
@@ -172,7 +174,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 380);
+            this.label4.Location = new System.Drawing.Point(65, 438);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 20);
@@ -181,7 +183,7 @@
             // 
             // label_TagResponse
             // 
-            this.label_TagResponse.Location = new System.Drawing.Point(191, 380);
+            this.label_TagResponse.Location = new System.Drawing.Point(191, 438);
             this.label_TagResponse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TagResponse.Name = "label_TagResponse";
             this.label_TagResponse.Size = new System.Drawing.Size(360, 49);
@@ -190,7 +192,7 @@
             // 
             // button_TAM1
             // 
-            this.button_TAM1.Location = new System.Drawing.Point(69, 434);
+            this.button_TAM1.Location = new System.Drawing.Point(69, 492);
             this.button_TAM1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_TAM1.Name = "button_TAM1";
             this.button_TAM1.Size = new System.Drawing.Size(170, 35);
@@ -201,7 +203,7 @@
             // 
             // button_TAM2
             // 
-            this.button_TAM2.Location = new System.Drawing.Point(248, 434);
+            this.button_TAM2.Location = new System.Drawing.Point(248, 492);
             this.button_TAM2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_TAM2.Name = "button_TAM2";
             this.button_TAM2.Size = new System.Drawing.Size(170, 35);
@@ -213,7 +215,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 29);
+            this.label5.Location = new System.Drawing.Point(65, 87);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 20);
@@ -222,17 +224,43 @@
             // 
             // textBox_EPC
             // 
-            this.textBox_EPC.Location = new System.Drawing.Point(195, 26);
+            this.textBox_EPC.Location = new System.Drawing.Point(195, 84);
             this.textBox_EPC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_EPC.Name = "textBox_EPC";
             this.textBox_EPC.Size = new System.Drawing.Size(356, 26);
-            this.textBox_EPC.TabIndex = 16;
+            this.textBox_EPC.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(65, 31);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 20);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Antenna Port :";
+            // 
+            // comboBox_Antenna
+            // 
+            this.comboBox_Antenna.FormattingEnabled = true;
+            this.comboBox_Antenna.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3 (External Antenna for CS203X)",
+            "4 (Internal Antenna for CS203X)"});
+            this.comboBox_Antenna.Location = new System.Drawing.Point(195, 28);
+            this.comboBox_Antenna.Name = "comboBox_Antenna";
+            this.comboBox_Antenna.Size = new System.Drawing.Size(285, 28);
+            this.comboBox_Antenna.TabIndex = 19;
+            this.comboBox_Antenna.Text = "1";
             // 
             // Form_UCODEDNA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 558);
+            this.Controls.Add(this.comboBox_Antenna);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox_EPC);
             this.Controls.Add(this.button_TAM2);
@@ -281,5 +309,7 @@
         private System.Windows.Forms.Button button_TAM2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox_EPC;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox_Antenna;
     }
 }
